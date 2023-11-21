@@ -8,9 +8,11 @@
     "start:1": "npx conc -k -s first \"npm:serve:1\" \"npm:bench\"",
     "start:2": "npx conc -k -s first \"npm:serve:2\" \"npm:bench\"",
     "start:3": "npx conc -k -s first \"npm:serve:3\" \"npm:bench\"",
+    "start:4": "npx conc -k -s first \"npm:serve:4\" \"npm:bench\"",
     "serve:1": "node 1-sync.js",
     "serve:2": "node 2-async.js",
     "serve:3": "node 3-async-await.js",
+    "serve:4": "node 4-timer.js",
     "bench": "npx autocannon localhost:3000"
   },
   "keywords": [],
