@@ -5,9 +5,9 @@
   "main": "main.js",
   "type": "module",
   "scripts": {
-    "start:1": "npx concurrently -k -s first \"npm run serve:1\" \"npm run bench\"",
-    "start:2": "npx concurrently -k -s first \"npm run serve:2\" \"npm run bench\"",
-    "start:3": "npx concurrently -k -s first \"npm run serve:3\" \"npm run bench\"",
+    "start:1": "npx conc -k -s first \"npm:serve:1\" \"npm:bench\"",
+    "start:2": "npx conc -k -s first \"npm:serve:2\" \"npm:bench\"",
+    "start:3": "npx conc -k -s first \"npm:serve:3\" \"npm:bench\"",
     "serve:1": "node 1-sync.js",
     "serve:2": "node 2-async.js",
     "serve:3": "node 3-async-await.js",
