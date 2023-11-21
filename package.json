@@ -1,0 +1,23 @@
+{
+  "name": "server-async-penalty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start:1": "npx concurrently -k -s first \"npm run serve:1\" \"npm run bench\"",
+    "start:2": "npx concurrently -k -s first \"npm run serve:2\" \"npm run bench\"",
+    "start:3": "npx concurrently -k -s first \"npm run serve:3\" \"npm run bench\"",
+    "serve:1": "node 1-sync.js",
+    "serve:2": "node 2-async.js",
+    "serve:3": "node 3-async-await.js",
+    "bench": "npx autocannon localhost:3000"
+  },
+  "keywords": [],
+  "author": "Maksym Shenderuk <jaood96@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "autocannon": "^7.12.0",
+    "concurrently": "^8.2.2"
+  }
+}
